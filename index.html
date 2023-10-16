@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/6bbebbe04f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | News homepage</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="nav-logo">
+          <a href="#"><img src="assets/images/logo.svg" alt="" /></a>
+        </div>
+        <nav class="navbar">
+          <ul class="sidebar">
+            <li onclick="hideSidebar()" class="close">
+              <a href="#"
+                ><img src="assets/images/icon-menu-close.svg" alt=""
+              /></a>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+          <ul>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">New</a></li>
+            <li class="hideOnMobile"><a href="#">Popular</a></li>
+            <li class="hideOnMobile"><a href="#">Trending</a></li>
+            <li class="hideOnMobile"><a href="#" class="cat">Categories</a></li>
+            <li onclick="showSidebar()" class="btn">
+              <a href="#"><img src="assets/images/icon-menu.svg" alt="" /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="grid">
+        <div class="image">
+          <img src="assets/images/image-web-3-desktop.jpg" alt="" />
+        </div>
+        <div class="blog-all">
+          <div class="blog-info">
+            <h1 class="blog-title">The Bright Future of Web 3.0?</h1>
+          </div>
+          <div class="blog-read">
+            <p class="blog-content">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2 class="heading">New</h2>
+          <div class="content-1">
+            <h3 class="content-heading">New Hydrogen VS Electric Cars</h3>
+            <p class="content-paragraph">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="content-1">
+            <h3 class="content-heading-1">The Downsides of AI Artistry</h3>
+            <p class="content-paragraph">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="content-1">
+            <h3 class="content-heading-2">Is VC Funding Drying Up?</h3>
+            <p class="content-paragraph para-1">
+              Private funding by VC firms is down 50% YOY.We take a look at what
+              that means.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex">
+        <div class="card">
+          <img src="assets/images/image-retro-pcs.jpg" alt="" />
+          <div class="card-content">
+            <div class="number">01</div>
+            <h3 class="card-title">Reviving Retro PCs</h3>
+            <p class="card-paragraph">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/image-top-laptops.jpg" alt="" />
+          <div class="card-content">
+            <div class="number">02</div>
+            <h3 class="card-title">Top 10 Laptops of 2022</h3>
+            <p class="card-paragraph">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/image-gaming-growth.jpg" alt="" />
+          <div class="card-content">
+            <div class="number">03</div>
+            <h3 class="card-title">The Growth of Gaming</h3>
+            <p class="card-paragraph">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

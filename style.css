@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%)
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 85%;
+    height: 85%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0rem;
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* nav li {
+  height: 50px;
+} */
+
+nav a {
+  text-decoration: none;
+  color: gray;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.cat {
+  padding: 0;
+}
+
+
+nav a:hover {
+  color: var(--Soft-orange);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 350px;
+  z-index: 999;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+}
+
+.btn {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "image image box"
+    "blog-all blog-all box";
+  grid-gap: 2rem;
+}
+
+.image {
+  grid-area: image;
+}
+
+.box {
+  grid-area: box;
+}
+
+.blog-all {
+  grid-area: blog-all;
+}
+
+.blog-all {
+  display: flex;
+  flex: 1;
+  gap: 3rem;
+}
+
+.blog-read {
+  padding-left: 30px;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  color: var(--Very-dark-blue);
+  align-items: center;
+}
+
+.blog-content {
+  color: var(--Grayish-blue);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.blog-read a{
+  text-decoration: none;
+  color: var(--Off-white);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: var(--Soft-red);
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+section .box {
+  background-color: hsl(240, 100%, 5%);
+  color: #ffffff;
+  padding: 0 30px;
+}
+
+.heading .content-1{
+  margin: 0 30px;
+}
+
+.heading {
+  color: var(--Soft-orange);
+  margin: 30px 0;
+}
+
+.content-heading {
+  margin-bottom: 20px;
+}
+
+.content-heading:hover,  .content-heading-1:hover,.content-heading-2:hover{
+  cursor: pointer;
+  color: var(--Soft-orange);
+}
+
+.content-heading-1 {
+  margin: 20px 0;
+}
+ 
+
+.content-heading-2 {
+  margin: 20px 0;
+}
+
+.content-paragraph {
+  color: var(--Grayish-blue);
+  line-height: 1.5;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--Grayish-blue);
+}
+
+.para-1 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+}
+
+.card img{
+  width: 90px;
+  object-fit: cover;
+}
+
+.card-content {
+ margin-left: 5px;
+}
+
+.number{
+  font-size: 25px;
+  color: var(--Grayish-blue);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-paragraph {
+  color: var(--Grayish-blue);
+}
+
+@media(max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .btn {
+    display: block;
+  }
+
+  .sidebar {
+    opacity: 1;
+  }
+  
+  .sidebar li {
+    padding: 20px 0;
+  }
+  
+  .sidebar a {
+    color: var(--Very-dark-blue);
+    font-weight: 400;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    left: 70%;
+  }
+ 
+  
+  
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "image"  
+      "blog-all"
+      "box";
+    grid-gap: 2rem;
+  }
+  
+  .blog-all {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .blog-title {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .box {
+    margin-top: 3rem;
+  }
+
+  .para-1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+    gap: 2rem;
+  }
+}
